@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyFrames</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .box {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            animation-name: move-box;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation: move-box 5s ease-in 2s infinite alternate forwards; /* shorthand */
+        }
+
+        @keyframes move-box {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+            33% {
+                left: 0px;
+                top: 100vh;
+                transform: translateY(-100%);
+                border-radius: 50%;
+                background-color: red;
+            }
+            66% {
+                left: 100vw;
+                top: 100vh;
+                transform: translate(-100%, -100%);
+                border-radius: 0%;
+                background-color: white;
+            }
+            100% {
+                left: 100vw;
+                top: 0px;
+                transform: translateX(-100%);
+                background-color: blue;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
