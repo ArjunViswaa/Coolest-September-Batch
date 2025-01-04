@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* h1 {
+            padding: 20px;
+            border: 1px solid black;
+        } */
+
+        .marginANDPadding-longhand {
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+        }
+
+        .marginANDPadding-shorthand1 {
+            margin : 10px 20px; /* (top & bottom) (left & right) */
+            padding : 10px 20px; /* (top & bottom) (left & right) */
+        }
+
+        .marginANDPadding-shorthand2 {
+            margin: 10px 20px 30px; /* (top) (left & right) (bottom) */
+            padding: 10px 20px 30px; /* (top) (left & right) (bottom) */
+        }
+
+        .marginANDPadding-shorthand3 {
+            margin: 10px 20px 30px; /* (top) (right) (bottom) (left) */
+            padding: 10px 20px 30px; /* (top) (right) (bottom) (left) */
+        }
+
+        .border {
+            border-top: 5px solid black;
+            border-right: 5px dotted blue;
+            border-bottom: 5px dashed red;
+            border-left: 5px double green
+        }
+
+        .round-border {
+            border: 2px solid black;
+            border-radius: 50px;
+        }
+
+        .custom-border-rad {
+            border: 2px solid black;
+            /* border-top-left-radius: 20px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 10px; */
+            /* Shorthand */
+            border-radius: 10px 20px 30px 40px; /* (top-left) (top-right) (bottom-right) (bottom-left) */
+        }
+
+        /* h2 {
+            margin: 20px;
+            border: 1px solid black;
+        } */
+    </style>
+</head>
+<body>
+    <h1 class = "marginANDPadding-longhand custom-border-rad">Apply padding for this</h1>
+    <div style = "height: 30px"></div>
+    <h2>Apply Margin for this</h2>
+</body>
+</html>
