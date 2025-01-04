@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            background-color: tomato;
+            border: 2px solid black;
+            height: 100vh;
+            width: auto;
+            /* after Flex */
+            display: flex;
+
+            /* You can also use many flex-direction property to arrange the elements in different ways. */
+            flex-direction: column;
+
+            /* Justify-content -> Main axis */ /* X-Axis for direction Row and Y-Axis for direction Column */
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: space-around;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: stretch;
+            justify-content: space-around;
+
+            /* align-items -> Cross axis */ /* Y-Axis for direction Row and X-Axis for direction Column */
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: space-around;
+            align-items: center;
+            align-items: space-between;
+            align-items: space-evenly;
+            align-items: stretch;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: dodgerblue;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</body>
+
+</html>
