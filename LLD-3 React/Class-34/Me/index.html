@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+        .heading {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        // Using Vanilla JS...
+        // const heading = document.createElement('h1');
+        // heading.innerText = "Hello from Vanilla JS";
+        // document.querySelector("#root").appendChild(heading);
+
+        // Using React...
+        const rootElement = document.getElementById("root");
+        let headingElement = React.createElement(
+            'h1',
+            {
+                class: 'heading',
+                style: {
+                    color: 'white',
+                    backgroundColor: 'black',
+                    fontSize: '4rem'
+                }
+            }, // This gets added as inlined style in the HTML rendered. So highest priority.
+            'Hello from React'
+        );
+        // console.log(headingElement);
+
+        ReactDOM.render(headingElement, rootElement); // Render the element to the root element. Use ReactDOM.render() to render the element to the root element.
+        
+    </script>
+</body>
+</html>
